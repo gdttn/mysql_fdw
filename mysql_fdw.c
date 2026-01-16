@@ -2243,7 +2243,7 @@ mysqlImportForeignSchema(ImportForeignSchemaStmt *stmt, Oid serverOid)
 					 "    WHEN c.DATA_TYPE = 'int' AND c.COLUMN_TYPE = 'int(10) unsigned' THEN 'numeric(10)'"
 					 "    WHEN c.DATA_TYPE = 'int' OR c.DATA_TYPE = 'mediumint unsigned' THEN 'integer'"
 					 "    WHEN c.DATA_TYPE = 'int unsigned' OR (c.DATA_TYPE = 'int' AND c.COLUMN_TYPE LIKE '%%%% unsigned') THEN 'bigint'"
-					 "    WHEN c.DATA_TYPE = c.DATA_TYPE = 'bigint' AND c.COLUMN_TYPE = 'bigint(20) unsigned' THEN 'numeric(20)'"
+					 "    WHEN c.DATA_TYPE = 'bigint' AND c.COLUMN_TYPE = 'bigint(20) unsigned' THEN 'numeric(20)'"
 					 "    WHEN c.DATA_TYPE = 'bigint unsigned' OR (c.DATA_TYPE = 'bigint' AND c.COLUMN_TYPE LIKE '%%%% unsigned') THEN 'numeric'"
 					 "    WHEN c.DATA_TYPE = 'double' THEN 'double precision'"
 					 "    WHEN c.DATA_TYPE = 'float' THEN 'real'"
